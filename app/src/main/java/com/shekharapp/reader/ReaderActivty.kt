@@ -25,7 +25,7 @@ class ReaderActivty : AppCompatActivity() {
     }
 
     private fun loadFromStorage() {
-        pdfView.fromAsset("${bookName}.pdf").load()
+        pdfView.fromAsset("${bookName}.pdf").load()                            //String Templates
 
     }
 

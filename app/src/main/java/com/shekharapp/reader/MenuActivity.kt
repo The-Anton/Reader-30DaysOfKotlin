@@ -1,13 +1,20 @@
 package com.shekharapp.reader;
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
+import android.widget.LinearLayout
 import android.widget.ListView
-import kotlinx.android.synthetic.main.activity_menu.*
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.FirebaseFirestore
+import java.util.*
 
 class MenuActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
@@ -19,45 +26,28 @@ class MenuActivity : AppCompatActivity() {
         listView.adapter = adapter
 
 
+
         listView.setOnItemClickListener{parent, view, position, id ->
 
 
-            if (position==0){
+            val bookName = when(position){
+
+                0->"brain_facts"
+                2->"brainteasers"
+                3->"ImprovingMemory"
+                4->"arduino_robot"
+                5->"Electricity"
+                6->"FundalRocketMotors"
+                else -> null
+            }
+
                 val intent =  Intent(this, ReaderActivty::class.java)
-                intent.putExtra("BookName", "brain_facts")
+                intent.putExtra("BookName", "${bookName}")
                 intent.putExtra("Mode", "0")
                 startActivity(intent)
-            }
-            if (position==1){
-                val intent =  Intent(this, ReaderActivty::class.java)
-                intent.putExtra("BookName", "brainteasers")
-                intent.putExtra("Mode", "0")
-                startActivity(intent)
-            }
-            if (position==2){
-                val intent =  Intent(this, ReaderActivty::class.java)
-                intent.putExtra("BookName", "ImprovingMemory")
-                intent.putExtra("Mode", "0")
-                startActivity(intent)
-            }
-            if (position==3){
-                val intent =  Intent(this, ReaderActivty::class.java)
-                intent.putExtra("BookName", "arduino_robot")
-                intent.putExtra("Mode", "0")
-                startActivity(intent)
-            }
-            if (position==4){
-                val intent =  Intent(this, ReaderActivty::class.java)
-                intent.putExtra("BookName", "Electricity")
-                intent.putExtra("Mode", "0")
-                startActivity(intent)
-            }
-            if (position==5){
-                val intent =  Intent(this, ReaderActivty::class.java)
-                intent.putExtra("BookName", "FundalRocketMotors")
-                intent.putExtra("Mode", "0")
-                startActivity(intent)
-            }
+
         }
     }
+
+
 }
