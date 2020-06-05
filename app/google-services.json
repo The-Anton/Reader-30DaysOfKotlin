@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "640674706773",
+    "firebase_url": "https://reader-20c9f.firebaseio.com",
+    "project_id": "reader-20c9f",
+    "storage_bucket": "reader-20c9f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640674706773:android:f738c9c067ad1f8a0f6bdc",
+        "android_client_info": {
+          "package_name": "com.shekharapp.reader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "640674706773-fff5igt0mgkok7k25ht69m9iic93hhd1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shekharapp.reader",
+            "certificate_hash": "c05f0bcbb8dde3982edf53a3d42a3c623300f298"
+          }
+        },
+        {
+          "client_id": "640674706773-4pp8n7abik7ldd2r56lbe87hlr5bo3fn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfegtXnKJyPhwNx4NDSBEit1EN3p91B9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "640674706773-4pp8n7abik7ldd2r56lbe87hlr5bo3fn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
